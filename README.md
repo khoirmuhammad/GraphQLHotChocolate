@@ -32,3 +32,5 @@ Step by step are the following
   - Resolver Folder
   - Queries Folder : Since we make single shcema and single endpoint, then we need to split our query by its entity. For example Entities (Department, Employee). For cleaning code design we need to split query into 2 class as well, called DepartmentQuery & EmployeeQuery. So each entity will be proceed by its query respectively.
   - Mutations Folder : In order to give command Insert , Update, Delete via GraphQL
+  
+ 10. Once again we have to register our GraphQL in startup, dont forget to set up endpoint "endpoints.MapGraphQL();"
