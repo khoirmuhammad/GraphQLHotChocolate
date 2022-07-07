@@ -34,3 +34,80 @@ Step by step are the following
   - Mutations Folder : In order to give command Insert , Update, Delete via GraphQL
   
  10. Once again we have to register our GraphQL in startup, dont forget to set up endpoint "endpoints.MapGraphQL();"
+ 
+ ## Query Test
+ 
+ ### We able to use /graphql interface screen
+ ![Test Image 1](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/Run%20graphql.PNG)
+ 
+ 
+ ### Or use /playground for testing purpose
+ ![Test Image 2](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/Run%20playground.PNG)
+ 
+ 
+ ### Try to get all departments
+ ![Test Image 3](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/getalldepartments.PNG)
+ 
+ 
+ ### Try to get departement data by ID 
+ ![Test Image 4](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/getdepartmentbyid.PNG)
+ 
+ 
+ ### This is a resolver purpose. Once we attempt to get department by id, we also able to get all of employees that in particular department
+ ![Test Image 5](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/getdepartmentbyidandemployeeresolver.PNG)
+ 
+ 
+ ### Once we attempt to get employee info, we also can retreive department info
+ ![Test Image 6](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/getemployeebyidanddepartmentresolver.PNG)
+ 
+ 
+ ### GraphQL able to prevent multiple rounds trip by calling 2 query in single request
+ ![Test Image 7](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/singletripcall.PNG)
+ 
+ 
+ 
+ ### Query Sample
+ 
+```
+query{
+  departments {
+    id,
+    name
+  }
+}
+```
+```
+query{
+  department(id:"3f57f5d160924713acac2ccd09d5062d"){
+    id,
+    name
+  }
+}
+```
+```
+query{
+  department(id:"3f57f5d160924713acac2ccd09d5062d") {
+    id,
+    name,
+    employees{
+      id,
+      name
+    }
+  }
+}
+```
+```
+query{
+  
+  employee(id: "fc5c21790c634980a87a2ae9a3ba475f") {
+    id,
+    name,
+  }
+
+  department(id:"3f57f5d160924713acac2ccd09d5062d"){
+    id,
+    name
+  }
+  
+}
+```
