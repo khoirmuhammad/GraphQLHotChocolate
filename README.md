@@ -35,7 +35,7 @@ Step by step are the following
   
  10. Once again we have to register our GraphQL in startup, dont forget to set up endpoint "endpoints.MapGraphQL();"
  
- ## Query Test
+ # B GraphQL Client Testing
  
  ### We able to use /graphql interface screen
  ![Test Image 1](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/Run%20graphql.PNG)
