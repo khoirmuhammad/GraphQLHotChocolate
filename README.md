@@ -66,7 +66,7 @@ Step by step are the following
  
  
  
- ### Query Sample
+ ### Department Query Sample
  
 ```
 query{
@@ -96,6 +96,8 @@ query{
   }
 }
 ```
+### Employee Query Sample
+
 ```
 query{
   
@@ -109,5 +111,66 @@ query{
     name
   }
   
+}
+```
+
+### Department Mutation (Insert, Update, Delete)
+```
+mutation{
+  createDepartment(input: {
+    id:"2CED691E-854C-489B-ACD6-765D369BDF5B",
+    name:"Risk Management"
+  }) {
+    id,name
+  }
+}
+```
+```
+mutation{
+  updateDepartment(
+  id: "15597C61-C257-4B54-A987-18A0D34A1F86",
+  input: {
+    name : "Supply Chain Management"
+  }) {
+    id,
+    name
+  }
+}
+```
+```
+mutation{
+  deleteDepartment(id: "2CED691E-854C-489B-ACD6-765D369BDF5B")   
+}
+```
+### Employee  Mutation (Insert, Update)
+```
+mutation{
+  createEmployee(input: {
+    name:"Sihombing",
+    isSingle:true,
+    birthDate:"2005-01-12",
+    kpiValue:96.21,
+    departmentId:"15597C61-C257-4B54-A987-18A0D34A1F86"
+  }) {
+    id,
+    name
+  }
+}
+```
+```
+mutation{
+  updateEmployee(
+    id: "77E29D40-B84B-4524-A7E3-5F0581E1B7BB",
+    input: {
+      isSingle: false,
+      kpiValue: 97.34,
+      departmentId: "15597C61-C257-4B54-A987-18A0D34A1F86"
+    }) {
+    id,
+    name,
+    isSingle,
+    birthDate,
+    kpiValue
+  }
 }
 ```
