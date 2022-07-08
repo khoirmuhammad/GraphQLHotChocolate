@@ -64,5 +64,42 @@ namespace GraphQLHotChocolate.Repositories
                 throw new Exception();
             }
         }
+
+        public async Task<Department> UpdateAsync(Department department)
+        {
+            try
+            {
+                using (var applicationDbContext = _dbContextFactory.CreateDbContext())
+                {
+                    applicationDbContext.Departments.Update(department);
+                    await applicationDbContext.SaveChangesAsync();
+
+                    return department;
+                }
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
+
+        public async Task<bool> DeleteAsync(Guid id)
+        {
+            try
+            {
+                using (var applicationDbContext = _dbContextFactory.CreateDbContext())
+                {
+                    applicationDbContext.Departments.Remove(applicationDbContext.Departments.FirstOrDefault(x => x.Id == id));
+
+                    await applicationDbContext.SaveChangesAsync();
+
+                    return true;
+                }
+            }
+            catch(Exception ex)
+            {
+                throw new Exception();
+            }
+        }
     }
 }

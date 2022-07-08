@@ -34,6 +34,26 @@ namespace GraphQLHotChocolate.Repositories
             }
         }
 
+        public async Task<bool> DeleteAsync(Guid id)
+        {
+            try
+            {
+                using (var applicationDbContext = _dbContextFactory.CreateDbContext())
+                {
+                    Employee employee = await this.GetByIdAsync(id);
+
+                    applicationDbContext.Remove(employee);
+                    await applicationDbContext.SaveChangesAsync();
+
+                    return true;
+                }
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
+
         public async Task<IEnumerable<Employee>> GetAllAsync()
         {
             try
@@ -56,6 +76,24 @@ namespace GraphQLHotChocolate.Repositories
                 using (var applicationDbContext = _dbContextFactory.CreateDbContext())
                 {
                     return await applicationDbContext.Employees.FirstOrDefaultAsync(x => x.Id == id);
+                }
+            }
+            catch
+            {
+                throw new Exception();
+            }
+        }
+
+        public async Task<Employee> UpdateAsync(Employee employee)
+        {
+            try
+            {
+                using (var applicationDbContext = _dbContextFactory.CreateDbContext())
+                {
+                    applicationDbContext.Employees.Update(employee);
+                    await applicationDbContext.SaveChangesAsync();
+
+                    return employee;
                 }
             }
             catch

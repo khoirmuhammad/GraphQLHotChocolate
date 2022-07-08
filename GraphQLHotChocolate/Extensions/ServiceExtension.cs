@@ -1,5 +1,6 @@
 ﻿using GraphQLHotChocolate.Contracts;
 using GraphQLHotChocolate.GraphQL;
+using GraphQLHotChocolate.GraphQL.Mutations;
 using GraphQLHotChocolate.GraphQL.Queries;
 using GraphQLHotChocolate.GraphQL.Types;
 using GraphQLHotChocolate.Repositories;
@@ -30,7 +31,10 @@ namespace GraphQLHotChocolate.Extensions
                 .AddType<EmployeeType>()
                     .AddQueryType(d => d.Name("Query"))
                         .AddTypeExtension<DepartmentQuery>()
-                        .AddTypeExtension<EmployeeQuery>();
+                        .AddTypeExtension<EmployeeQuery>()
+                    .AddMutationType(d => d.Name("Mutation"))
+                        .AddTypeExtension<DepartmentMutation>()
+                        .AddTypeExtension<EmployeeMutation>();
         }
     }
 }

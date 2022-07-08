@@ -22,8 +22,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.3.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="GraphQL\Mutations\" />
-  </ItemGroup>
-
 </Project>
