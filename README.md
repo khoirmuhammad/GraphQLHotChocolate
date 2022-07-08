@@ -176,3 +176,6 @@ mutation{
 ```
 # C. GraphQL Client using .NET (GraphQL.NETClient Project)
 
+Install the following packages
+1. GraphQL.Client
+2. GraphQL.Client.Serializer.Newtonsoft
