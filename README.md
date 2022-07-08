@@ -66,7 +66,7 @@ Step by step are the following
  
  
  
- ### Query Sample Department
+ ### Department Query Sample
  
 ```
 query{
@@ -96,7 +96,7 @@ query{
   }
 }
 ```
-### Query Sample Employee
+### Employee Query Sample
 
 ```
 query{
@@ -114,7 +114,7 @@ query{
 }
 ```
 
-### Mutation (Insert, Update, Delete) Department
+### Department Mutation (Insert, Update, Delete)
 ```
 mutation{
   createDepartment(input: {
@@ -142,7 +142,7 @@ mutation{
   deleteDepartment(id: "2CED691E-854C-489B-ACD6-765D369BDF5B")   
 }
 ```
-### Mutation (Insert, Update) Employee
+### Employee  Mutation (Insert, Update)
 ```
 mutation{
   createEmployee(input: {
