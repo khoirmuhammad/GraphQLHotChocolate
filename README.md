@@ -1,4 +1,4 @@
-# GraphQL in NET Core using Hot Chocolate
+# A GraphQL API in NET Core using Hot Chocolate (Host)
 
 Hot Chocolate is an open-source GraphQL server built for the Microsoft .NET platform. It removes the complexity of building GraphQL APIs from scratch with built-in features for queries, mutations, and subscriptions
 
