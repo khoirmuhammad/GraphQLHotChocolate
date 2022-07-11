@@ -179,3 +179,20 @@ mutation{
 Install the following packages
 1. GraphQL.Client
 2. GraphQL.Client.Serializer.Newtonsoft
+
+### Please create Models directory
+In order to work with our API endpoint databinding. For example if we need to catch data from swagger, either from query, from body etc.
+
+### Please create Types directory
+In order to deal with response data from GraphQL API. We have to follow the naming convention based on GraphQL Schema
+
+![Test Image 8](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/QuerySchema.PNG)
+
+![Test Image 9](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/MutationSchema.PNG)
+
+### Then create Services directory
+In order to consume GraphQL directly
+
+### Finally we able to create controller as our endpoint
+
+
