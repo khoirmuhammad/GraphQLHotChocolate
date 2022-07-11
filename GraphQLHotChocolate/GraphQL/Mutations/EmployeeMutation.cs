@@ -12,7 +12,7 @@ namespace GraphQLHotChocolate.GraphQL.Mutations
             _employeeRepository = employeeRepository;
         }
 
-        public record CreateEmployeeModel(
+        public record InsertEmployeeModel(
             string name, DateTime birthDate, bool isSingle, double kpiValue, Guid departmentId
         );
 
@@ -20,7 +20,7 @@ namespace GraphQLHotChocolate.GraphQL.Mutations
             bool isSingle, double kpiValue, Guid departmentId
         );
 
-        public async Task<Employee> CreateEmployee(CreateEmployeeModel input)
+        public async Task<Employee> CreateEmployee(InsertEmployeeModel input)
         { 
             return await _employeeRepository.CreateAsync(new Employee()
             {
