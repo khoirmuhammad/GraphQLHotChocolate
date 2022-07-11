@@ -1,4 +1,4 @@
-# GraphQL in NET Core using Hot Chocolate
+# A GraphQL API in NET Core using Hot Chocolate (GraphQLHotChocolate Project)
 
 Hot Chocolate is an open-source GraphQL server built for the Microsoft .NET platform. It removes the complexity of building GraphQL APIs from scratch with built-in features for queries, mutations, and subscriptions
 
@@ -35,7 +35,7 @@ Step by step are the following
   
  10. Once again we have to register our GraphQL in startup, dont forget to set up endpoint "endpoints.MapGraphQL();"
  
- ## Query Test
+ # B GraphQL Client Testing
  
  ### We able to use /graphql interface screen
  ![Test Image 1](https://github.com/khoirmuhammad/GraphQLHotChocolate/blob/master/Images/Run%20graphql.PNG)
@@ -174,3 +174,8 @@ mutation{
   }
 }
 ```
+# C. GraphQL Client using .NET (GraphQL.NETClient Project)
+
+Install the following packages
+1. GraphQL.Client
+2. GraphQL.Client.Serializer.Newtonsoft
