@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQLHotChocolate", "GraphQLHotChocolate\GraphQLHotChocolate.csproj", "{F56B1A1C-3362-4910-ABAB-9E981795D5C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQL.NETClient", "GraphQL.NETClient\GraphQL.NETClient.csproj", "{DBBE3EB0-BBE7-4B41-8190-DF06000CE302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQL.NETClient", "GraphQL.NETClient\GraphQL.NETClient.csproj", "{DBBE3EB0-BBE7-4B41-8190-DF06000CE302}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

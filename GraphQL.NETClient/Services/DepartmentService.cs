@@ -32,7 +32,8 @@ namespace GraphQL.NETClient.Services
                                   kpiValue
                                 }
                               }
-                            }"
+                            }",
+                    Variables = null
                 };
 
                 // in order to determine "Type" see on schema graphql / depends on method name in query (API)
